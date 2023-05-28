@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit {% endblock %}
+
+{% block content %}
+
+
+    <div class="card mb-3">
+        <h4 class="text-center mt-2">Edit {{ model }}</h4>
+        <form class="text-center mt-2" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+
+
+{% endblock %}
